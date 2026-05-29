@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta sobre Contaminación Ambiental</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #27ae60;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        .section {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            border-left: 4px solid #27ae60;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .options {
+            margin-left: 20px;
+        }
+        .options label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+        .options input[type="checkbox"],
+        .options input[type="radio"] {
+            margin-right: 10px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .signature {
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px dashed #999;
+            text-align: center;
+        }
+        .signature-line {
+            border-top: 1px solid #333;
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+        .print-button {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 30px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .print-button:hover {
+            background-color: #219150;
+        }
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .print-button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ENCUESTA SOBRE CONTAMINACIÓN AMBIENTAL</h1>
+        <p style="text-align: center; color: #7f8c8d;">
+            <strong>Proyecto:</strong> Teoría de Conjuntos aplicada al Medio Ambiente<br>
+            <strong>Tema:</strong> Contaminación
+        </p>
+
+        <button class="print-button" onclick="window.print()">🖨️ Imprimir Encuesta</button>
+
+        <div class="section">
+            <h2>DATOS DEL ENCUESTADO</h2>
+            <label><strong>Fecha:</strong></label>
+            <input type="text" class="input-field" placeholder="___/___/_____">
+            
+            <label><strong>Lugar:</strong></label>
+            <input type="text" class="input-field" placeholder="_______________________">
+            
+            <label><strong>Edad:</strong></label>
+            <input type="text" class="input-field" placeholder="_______">
+            
+            <label><strong>Ocupación:</strong></label>
+            <input type="text" class="input-field" placeholder="_______________________">
+        </div>
+
+        <div class="section">
+            <h2>PREGUNTAS</h2>
+
+            <div class="question">
+                <h3>1. ¿Qué tipo de contaminación considera más problemática en su comunidad?</h3>
+                <div class="options">
+                    <label><input type="radio" name="p1"> Aire</label>
+                    <label><input type="radio" name="p1"> Agua</label>
+                    <label><input type="radio" name="p1"> Suelo</label>
+                    <label><input type="radio" name="p1"> Ruido</label>
+                    <label><input type="radio" name="p1"> Visual</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>2. ¿Practica alguna de las siguientes acciones para reducir la contaminación?</h3>
+                <div class="options">
+                    <label><input type="checkbox"> Reciclaje</label>
+                    <label><input type="checkbox"> Reutilización de materiales</label>
+                    <label><input type="checkbox"> Ahorro de agua</label>
+                    <label><input type="checkbox"> Uso de transporte ecológico (bicicleta, caminar)</label>
+                    <label><input type="checkbox"> Ninguna</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>3. ¿Cómo dispone sus residuos?</h3>
+                <div class="options">
+                    <label><input type="radio" name="p3"> Separación en origen (orgánicos, reciclables, no reciclables)</label>
+                    <label><input type="radio" name="p3"> Todo en un solo contenedor</label>
+                    <label><input type="radio" name="p3"> Quema de basura</label>
+                    <label><input type="radio" name="p3"> Otro: _______________</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>4. ¿Con qué frecuencia observa contaminación en su entorno?</h3>
+                <div class="options">
+                    <label><input type="radio" name="p4"> Diariamente</label>
+                    <label><input type="radio" name="p4"> Varias veces por semana</label>
+                    <label><input type="radio" name="p4"> Ocasionalmente</label>
+                    <label><input type="radio" name="p4"> Rara vez</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>5. ¿Considera que la contaminación afecta su salud?</h3>
+                <div class="options">
+                    <label><input type="radio" name="p5"> Sí, mucho</label>
+                    <label><input type="radio" name="p5"> Sí, moderadamente</label>
+                    <label><input type="radio" name="p5"> Poco</label>
+                    <label><input type="radio" name="p5"> No</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>6. ¿Qué medidas tomaría usted personalmente para reducir la contaminación?</h3>
+                <textarea class="input-field" rows="3" placeholder="Respuesta: _________________________________________________"></textarea>
+            </div>
+
+            <div class="question">
+                <h3>7. ¿Cree que las autoridades locales hacen suficiente para combatir la contaminación?</h3>
+                <div class="options">
+                    <label><input type="radio" name="p7"> Sí</label>
+                    <label><input type="radio" name="p7"> No</label>
+                    <label><input type="radio" name="p7"> No sabe/No opina</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="signature">
+            <h2>FIRMA DEL ENCUESTADO</h2>
+            <div class="signature-line"></div>
+        </div>
+
+        <div class="section">
+            <h2>OBSERVACIONES DEL ENCUESTADOR</h2>
+            <textarea class="input-field" rows="3" placeholder="_________________________________________________"></textarea>
+        </div>
+
+        <button class="print-button" onclick="window.print()">🖨️ Imprimir Encuesta</button>
+    </div>
+</body>
+</html>

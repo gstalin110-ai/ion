@@ -1,0 +1,56 @@
+{
+  "name": "sogyTweb",
+  "short_name": "sogyTweb",
+  "description": "Ecosistema digital todo en uno: Marketplace, Red Social, IA y Finanzas",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["shopping", "social", "finance", "business"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Marketplace",
+      "short_name": "Tienda",
+      "description": "Explora productos y tiendas",
+      "url": "/",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Mundo Social",
+      "short_name": "Mundo",
+      "description": "Conecta con amigos",
+      "url": "/feed",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "ion AI",
+      "short_name": "IA",
+      "description": "Asistente inteligente",
+      "url": "/ai",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Billetera",
+      "short_name": "Wallet",
+      "description": "Gestiona tus fondos",
+      "url": "/wallet",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

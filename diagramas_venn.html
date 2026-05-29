@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagramas de Venn - Proyecto Contaminación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #27ae60;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        .diagram {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .venn {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            margin: 20px auto;
+        }
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .circle-a {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(39, 174, 96, 0.3);
+            border: 3px solid #27ae60;
+            left: 50px;
+            top: 50px;
+        }
+        .circle-b {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(52, 152, 219, 0.3);
+            border: 3px solid #3498db;
+            left: 150px;
+            top: 50px;
+        }
+        .label {
+            position: absolute;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .label-a {
+            left: 80px;
+            top: 20px;
+            color: #27ae60;
+        }
+        .label-b {
+            left: 280px;
+            top: 20px;
+            color: #3498db;
+        }
+        .intersection {
+            position: absolute;
+            left: 180px;
+            top: 130px;
+            font-size: 12px;
+            color: #2c3e50;
+        }
+        .legend {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+        }
+        .legend-item {
+            margin: 5px 0;
+        }
+        .print-button {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 30px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .print-button:hover {
+            background-color: #219150;
+        }
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .print-button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DIAGRAMAS DE VENN</h1>
+        <p style="text-align: center; color: #7f8c8d;">
+            <strong>Proyecto:</strong> Teoría de Conjuntos - Contaminación Ambiental
+        </p>
+
+        <button class="print-button" onclick="window.print()">🖨️ Imprimir Diagramas</button>
+
+        <div class="diagram">
+            <h2>Diagrama 1: A ∪ B (Unión)</h2>
+            <p><strong>A = Personas que reciclan</strong> | <strong>B = Personas que reutilizan</strong></p>
+            
+            <div class="venn">
+                <span class="label label-a">A (Reciclaje)</span>
+                <span class="label label-b">B (Reutilización)</span>
+                <div class="circle circle-a">
+                    <span style="margin-left: -40px;">E1, E3, E5</span>
+                </div>
+                <div class="circle circle-b">
+                    <span style="margin-left: 40px;">E2</span>
+                </div>
+                <div class="intersection">
+                    E7, E9
+                </div>
+            </div>
+
+            <div class="legend">
+                <div class="legend-item"><strong>A ∪ B = {E1, E2, E3, E5, E7, E9}</strong></div>
+                <div class="legend-item">|A ∪ B| = 6 personas (60%)</div>
+                <div class="legend-item"><strong>Interpretación:</strong> El 60% de los encuestados practica reciclaje O reutilización (o ambas).</div>
+            </div>
+        </div>
+
+        <div class="diagram">
+            <h2>Diagrama 2: A ∩ B (Intersección)</h2>
+            <p><strong>A = Personas que reciclan</strong> | <strong>B = Personas que reutilizan</strong></p>
+            
+            <div class="venn">
+                <span class="label label-a">A (Reciclaje)</span>
+                <span class="label label-b">B (Reutilización)</span>
+                <div class="circle circle-a">
+                    <span style="margin-left: -40px;">E1, E3, E5</span>
+                </div>
+                <div class="circle circle-b">
+                    <span style="margin-left: 40px;">E2</span>
+                </div>
+                <div class="intersection">
+                    <strong>E7, E9</strong>
+                </div>
+            </div>
+
+            <div class="legend">
+                <div class="legend-item"><strong>A ∩ B = {E7, E9}</strong></div>
+                <div class="legend-item">|A ∩ B| = 2 personas (20%)</div>
+                <div class="legend-item"><strong>Interpretación:</strong> Solo el 20% practica ambas acciones simultáneamente. Hay oportunidad para fomentar la combinación de prácticas.</div>
+            </div>
+        </div>
+
+        <div class="diagram">
+            <h2>Diagrama 3: A' (Complemento)</h2>
+            <p><strong>A = Personas que reciclan</strong> | <strong>A' = Personas que NO reciclan</strong></p>
+            
+            <div class="venn">
+                <span class="label label-a">A (Reciclan)</span>
+                <div class="circle circle-a" style="left: 100px;">
+                    <span>E1, E3, E5, E7, E9</span>
+                </div>
+            </div>
+
+            <div class="legend">
+                <div class="legend-item"><strong>A = {E1, E3, E5, E7, E9}</strong> → |A| = 5 (50% reciclan)</div>
+                <div class="legend-item"><strong>A' = {E2, E4, E6, E8, E10}</strong> → |A'| = 5 (50% NO reciclan)</div>
+                <div class="legend-item"><strong>Interpretación:</strong> El 50% de los encuestados no recicla, lo cual es preocupante dado que el reciclaje es fundamental para reducir la contaminación.</div>
+            </div>
+        </div>
+
+        <div class="diagram">
+            <h2>Diagrama 4: A ∩ C (Intersección Reciclaje y Ahorro de Agua)</h2>
+            <p><strong>A = Personas que reciclan</strong> | <strong>C = Personas que ahorran agua</strong></p>
+            
+            <div class="venn">
+                <span class="label label-a">A (Reciclaje)</span>
+                <span class="label label-b" style="color: #e74c3c;">C (Ahorro Agua)</span>
+                <div class="circle circle-a">
+                    <span style="margin-left: -40px;">E3, E7</span>
+                </div>
+                <div class="circle circle-b" style="background-color: rgba(231, 76, 60, 0.3); border-color: #e74c3c;">
+                    <span style="margin-left: 40px;">E2, E8</span>
+                </div>
+                <div class="intersection">
+                    <strong>E1, E5, E9</strong>
+                </div>
+            </div>
+
+            <div class="legend">
+                <div class="legend-item"><strong>A ∩ C = {E1, E5, E9}</strong></div>
+                <div class="legend-item">|A ∩ C| = 3 personas (30%)</div>
+                <div class="legend-item"><strong>Interpretación:</strong> El 30% combina ambas prácticas, lo cual es positivo pero puede mejorarse mediante educación.</div>
+            </div>
+        </div>
+
+        <div class="diagram">
+            <h2>Diagrama 5: E' (Complemento de E)</h2>
+            <p><strong>E = Personas sin acciones ecológicas</strong> | <strong>E' = Personas con al menos una acción</strong></p>
+            
+            <div class="venn">
+                <span class="label label-a" style="color: #e74c3c;">E (Sin acciones)</span>
+                <div class="circle circle-a" style="background-color: rgba(231, 76, 60, 0.3); border-color: #e74c3c; left: 100px; width: 150px; height: 150px;">
+                    <span>E4, E10</span>
+                </div>
+            </div>
+
+            <div class="legend">
+                <div class="legend-item"><strong>E = {E4, E10}</strong> → |E| = 2 (20% sin acciones)</div>
+                <div class="legend-item"><strong>E' = {E1, E2, E3, E5, E6, E7, E8, E9}</strong> → |E'| = 8 (80% con acciones)</div>
+                <div class="legend-item"><strong>Interpretación:</strong> El 80% practica al menos una acción ecológica, lo que es alentador para futuras intervenciones.</div>
+            </div>
+        </div>
+
+        <button class="print-button" onclick="window.print()">🖨️ Imprimir Diagramas</button>
+    </div>
+</body>
+</html>

@@ -3,9 +3,9 @@ const pool = require('./config/database');
 
 async function createAdminUser() {
   const adminData = {
-    username: 'admin',
-    email: 'admin@sogytweb.com',
-    password: 'admin123', // Cambiar esto en producción
+    username: 'sogytweb',
+    email: 'gstalin110@gmail.com',
+    password: 'dueño/stalin/#',
     is_admin: true,
     is_verified: true,
     is_seller: true

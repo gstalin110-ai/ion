@@ -35,3 +35,4 @@ const Textarea = ({ className, ...props }) => {
 }
 
 export { Input, Textarea }
+export default Input

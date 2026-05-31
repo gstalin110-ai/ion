@@ -76,3 +76,5 @@ api_keys.txt
 uploads/
 tmp/
 temp/
+
+.vercel

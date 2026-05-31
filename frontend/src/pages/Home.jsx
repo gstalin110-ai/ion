@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
+import api from '../api'
 import ProductGrid from '../components/products/ProductGrid'
 import CategoryFilter from '../components/categories/CategoryFilter'
 import { TrendingUp, Sparkles, Zap } from 'lucide-react'
@@ -29,7 +29,7 @@ const Home = () => {
       if (selectedCategory) params.category_id = selectedCategory.id
       if (searchQuery) params.search = searchQuery
 
-      const response = await axios.get('/api/products', { params })
+      const response = await api.get('/products', { params })
       setProducts(response.data)
     } catch (error) {
       console.error('Error fetching products:', error)
@@ -40,7 +40,7 @@ const Home = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get('/api/categories')
+      const response = await api.get('/categories')
       setCategories(response.data)
     } catch (error) {
       console.error('Error fetching categories:', error)
